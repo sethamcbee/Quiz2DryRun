@@ -1,10 +1,14 @@
-/* Sample implementation of wc utility. */
+/**
+ * @file wc.c
+ * @brief Source code for GNU wc utility.
+ */
  
  #include <stdlib.h>
  #include <stdio.h>
  #include <stdarg.h>
  
- typedef unsigned long count_t;  /* Counter type */
+ /// Counter type.
+ typedef unsigned long count_t;
  
  /* Current file counters: chars, words, lines */
  count_t ccount;
@@ -29,7 +33,11 @@
    exit (1);  
  }
  
- /* Print error message and exit with error status. */
+ /**
+  * @brief Print error message and exit with error status.
+  * @param fmt Format specification for output string, ala printf().
+  * @return Error status.
+  */
  static void
  errf (char *fmt, ...)
  {
